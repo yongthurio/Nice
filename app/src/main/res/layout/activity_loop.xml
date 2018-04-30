@@ -7,6 +7,17 @@
     <com.jude.rollviewpager.RollPagerView
         android:id="@+id/view_pager"
         android:layout_width="match_parent"
-        android:layout_height="180dp"
+        android:layout_height="150dp"
         app:rollviewpager_play_delay="3000"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view_hr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view_vt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
 </LinearLayout>

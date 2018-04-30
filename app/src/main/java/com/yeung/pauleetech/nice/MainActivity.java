@@ -3,19 +3,28 @@ package com.yeung.pauleetech.nice;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
+import com.yeung.pauleetech.nice.ReclviewHR.Mission;
+import com.yeung.pauleetech.nice.ReclviewHR.MissionAdapter;
 import com.yeung.pauleetech.nice.RollviewpagerImt.LoopActivity;
 /*import com.yeung.pauleetech.nice.RollviewpagerImt.NetImageActivity;*/
 import com.yeung.pauleetech.nice.RollviewpagerImt.SimpleActivity;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class MainActivity extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         Intent LAintent=new Intent(this,LoopActivity.class);
         startActivity(LAintent);
     }
@@ -34,4 +43,6 @@ public class MainActivity extends AppCompatActivity {
         Intent i = new Intent(this,NetImageActivity.class);
         startActivity(i);
     }*/
+
+
 }
