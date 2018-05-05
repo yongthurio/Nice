@@ -8,43 +8,41 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.yeung.pauleetech.nice.Fragment.HomeFragment;
 import com.yeung.pauleetech.nice.Fragment.RecommendFragment;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 /*import com.yeung.pauleetech.nice.RollviewpagerImt.NetImageActivity;*/
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
-    private ImageView imageView_home;
-    private ImageView imageView_recommend;
-    private ImageView imageView_discovery;
-    private ImageView imageView_me;
-    private LinearLayout home;
-    private LinearLayout recommend;
-    private LinearLayout discovery;
-    private LinearLayout me;
-    private TextView textView_home;
-    private TextView textView_recommend;
-    private TextView textView_discovery;
-    private TextView textView_me;
+    @BindView(R.id.apphome)
+    LinearLayout home;
+    @BindView(R.id.recommend)
+    LinearLayout recommend;
+    @BindView(R.id.discovery)
+    LinearLayout discovery;
+    @BindView(R.id.me)
+    LinearLayout me;
+    @BindView(R.id.text_home)
+    TextView textView_home;
+    @BindView(R.id.text_recommend)
+    TextView textView_recommend;
+    @BindView(R.id.text_discovery)
+    TextView textView_discovery;
+    @BindView(R.id.text_me)
+    TextView textView_me;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         replaceFragment(new HomeFragment());
-        home=(LinearLayout)findViewById(R.id.apphome);
-        recommend =(LinearLayout)findViewById(R.id.recommend);
-        discovery=(LinearLayout)findViewById(R.id.discovery);
-        me=(LinearLayout)findViewById(R.id.me);
-        textView_home=(TextView)findViewById(R.id.text_home);
-        textView_recommend =(TextView)findViewById(R.id.text_recommend);
-        textView_discovery=(TextView)findViewById(R.id.text_discovery);
-        textView_me=(TextView)findViewById(R.id.text_me);
+        ButterKnife.bind(this);
 
         textView_home.setTextColor(Color.GREEN);
         home.setOnClickListener(this);

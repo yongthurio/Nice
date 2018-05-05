@@ -4,11 +4,14 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.SearchView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.jude.rollviewpager.RollPagerView;
 import com.jude.rollviewpager.adapter.LoopPagerAdapter;
@@ -28,6 +31,10 @@ public class HomeFragment extends Fragment {
     private List<Mission> missionList=new ArrayList<>();
     private List<Commodity> commodityList=new ArrayList<>();
 
+    private ImageView title_image;
+    private SearchView searchView;
+    private TextView search_text;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -37,6 +44,9 @@ public class HomeFragment extends Fragment {
     }
 
     public void onCreateItem() {
+        title_image=(ImageView)view.findViewById(R.id.title_image);
+        searchView=(SearchView) view.findViewById(R.id.search_view);
+        search_text =(TextView) view.findViewById(R.id.title_text);
         mViewPager = (RollPagerView) view.findViewById(R.id.view_pager);
         mViewPager.setAdapter(new ImageLoopAdapter(mViewPager));
 
@@ -52,7 +62,7 @@ public class HomeFragment extends Fragment {
         //*   对ReclviewVT的操作  *//*
         initCommodity();
         RecyclerView recyclerView1=(RecyclerView) view.findViewById(R.id.recycler_view_vt);
-        StaggeredGridLayoutManager sglayoutmanager=new StaggeredGridLayoutManager(4,StaggeredGridLayoutManager.VERTICAL);
+        StaggeredGridLayoutManager sglayoutmanager=new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL);
         recyclerView1.setLayoutManager(sglayoutmanager);
         CommodityAdapter adapter1=new CommodityAdapter(commodityList);
         recyclerView1.setAdapter(adapter1);
