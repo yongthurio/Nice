@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         FragmentManager fragmentManager=getSupportFragmentManager();
         FragmentTransaction transaction=fragmentManager.beginTransaction();
         //FragmentTransaction是对Fragment进行添加，替换，移除等操作的。在使用add(),replace(),remove()时可以动态的给每一个Fragment添加一个标签，
-        // 下次方便FragmentManager通过tag标签进行查找。最后记得ft.commit();
+        // 下次方便FragmentManager通过tag标签进行查找。最后记得ft.commit();。。。。。
         transaction.replace(R.id.top_layout,fragment);
         transaction.commit();
     }
