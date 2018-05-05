@@ -15,9 +15,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RollviewpagerImt.LoopActivity" />
-        <activity android:name=".RollviewpagerImt.NetImageActivity" />
-        <activity android:name=".RollviewpagerImt.SimpleActivity"></activity>
+        <activity android:name=".MainPageLayout.Fragment.RollviewpagerImt.LoopActivity" />
+
+        
     </application>
 
 </manifest>
