@@ -4,13 +4,11 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.SearchView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.jude.rollviewpager.RollPagerView;
@@ -32,7 +30,7 @@ public class HomeFragment extends Fragment {
     private List<Commodity> commodityList=new ArrayList<>();
 
     private ImageView title_image;
-    private SearchView searchView;
+    private TextView searchText;
     private TextView search_text;
 
     @Override
@@ -45,7 +43,7 @@ public class HomeFragment extends Fragment {
 
     public void onCreateItem() {
         title_image=(ImageView)view.findViewById(R.id.title_image);
-        searchView=(SearchView) view.findViewById(R.id.search_view);
+        searchText =(TextView) view.findViewById(R.id.search_text);
         search_text =(TextView) view.findViewById(R.id.title_text);
         mViewPager = (RollPagerView) view.findViewById(R.id.view_pager);
         mViewPager.setAdapter(new ImageLoopAdapter(mViewPager));

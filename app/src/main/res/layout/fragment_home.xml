@@ -8,55 +8,88 @@
    <LinearLayout
        android:orientation="horizontal"
        android:layout_width="match_parent"
-       android:layout_height="wrap_content"
+       android:layout_height="50dp"
        android:background="#FF5000">
        <ImageView
            android:id="@+id/title_image"
            android:layout_width="wrap_content"
            android:layout_height="match_parent"
            android:src="@drawable/home_scan"
-           android:layout_margin="5dp"/>
+           android:layout_margin="10dp"/>
 
-       <android.support.v7.widget.SearchView
+       <!--<android.support.v7.widget.SearchView
            android:id="@+id/search_view"
            android:layout_width="0dp"
            android:layout_weight="1"
-           android:layout_height="match_parent" />
+           android:layout_height="match_parent" />-->
+       <LinearLayout
+           android:layout_width="0dp"
+           android:layout_weight="1"
+           android:layout_height="30dp"
+           android:background="@drawable/sharp_shape"
+           android:layout_gravity="center_vertical">
+           <ImageView
+               android:layout_width="10dp"
+               android:layout_height="match_parent"
+               android:src="@drawable/home_search"
+               android:layout_margin="10dp"/>
+
+           <EditText
+               style="?android:attr/textViewStyle"
+               android:id="@+id/search_text"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:background="@null"
+               android:hint="农药"
+               android:maxLines="1"
+               android:focusable="false"/>
+       </LinearLayout>
 
        <TextView
            android:id="@+id/title_text"
            android:layout_width="60dp"
-           android:layout_height="match_parent"
+           android:layout_height="wrap_content"
            android:text="搜索"
-           android:layout_margin="20dp"/>
+           android:layout_marginLeft="10dp"
+           android:layout_gravity="center_vertical"/>
    </LinearLayout>
 
-    <com.jude.rollviewpager.RollPagerView
-        android:id="@+id/view_pager"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="160dp"
-        app:rollviewpager_play_delay="3000"/>
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.jude.rollviewpager.RollPagerView
+                android:id="@+id/view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                app:rollviewpager_play_delay="3000"/>
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recycler_view_hr"
-        android:layout_width="match_parent"
-        android:layout_height="80sp"/>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view_hr"
+                android:layout_width="match_parent"
+                android:layout_height="80sp"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="8dp"
-        android:background="#DEDEDE"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="#DEDEDE"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="为你推荐"
-        android:textColor="#FF5000"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="为你推荐"
+                android:textColor="#FF5000"/>
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recycler_view_vt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view_vt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </ScrollView>
+
 </LinearLayout>
 
