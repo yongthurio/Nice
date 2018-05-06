@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="themeGreen">#049106</color>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="transparent_background">#99ffffff</color>
     <color name="GrayLine">#ffdee3ee</color>
     <color name="blue">#00000000</color>
+
     <color name="background">#fff3f4f6</color>
     <color name="test">#fff3f4f6</color>
     <color name="f1f3f6">#fff1f3f6</color>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:background="#fff3f4f6" android:layout_width="fill_parent" android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@+id/contentLayout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:id="@+id/topBg"  android:paddingLeft="16.0dip" android:layout_width="fill_parent" android:layout_height="45.0dip">
+            <TextView android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="我的购物车" android:layout_centerHorizontal="true"  />
+        </RelativeLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/shopcarNo" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="2.0dip" android:src="@drawable/shoppingcar_no" />
+            <TextView android:textSize="16.0sp" android:textColor="#ffa2a6b1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="您的购物车中没有商品" />
+            <LinearLayout android:orientation="horizontal" android:paddingLeft="10.0dip" android:paddingTop="20.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <Button android:textSize="16.0sp" android:textColor="#ffffffff" android:id="@+id/btnFavorite"  android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="我的收藏" android:layout_weight="1.0" />
+                <Button android:textSize="16.0sp" android:textColor="#ffffffff" android:id="@+id/btnRecentBrowse"  android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="最近浏览" android:layout_weight="1.0" />
+            </LinearLayout>
+        </LinearLayout>
+        <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>
