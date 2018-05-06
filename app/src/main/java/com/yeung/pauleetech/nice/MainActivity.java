@@ -11,8 +11,9 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.yeung.pauleetech.nice.Fragment.HomeFragment;
-import com.yeung.pauleetech.nice.Fragment.RecommendFragment;
+import com.yeung.pauleetech.nice.MainPageLayout.Fragment.HomeFragment;
+import com.yeung.pauleetech.nice.MeLayout.MeFragement;
+import com.yeung.pauleetech.nice.ShoppingCartPageLayout.ShoppingCartFragment;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -76,13 +77,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 textView_discovery.setTextColor(Color.BLACK);
                 textView_me.setTextColor(Color.BLACK);
                 break;
-            case R.id.recommend:
-                replaceFragment(new RecommendFragment());
-                textView_home.setTextColor(Color.BLACK);
-                textView_recommend.setTextColor(Color.GREEN);
-                textView_discovery.setTextColor(Color.BLACK);
-                textView_me.setTextColor(Color.BLACK);
-                break;
             case R.id.discovery:
                 replaceFragment(new HomeFragment());
                 textView_home.setTextColor(Color.BLACK);
@@ -90,8 +84,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 textView_discovery.setTextColor(Color.GREEN);
                 textView_me.setTextColor(Color.BLACK);
                 break;
+            case R.id.shoppingcart:
+                replaceFragment(new ShoppingCartFragment());
+                textView_home.setTextColor(Color.BLACK);
+                textView_recommend.setTextColor(Color.GREEN);
+                textView_discovery.setTextColor(Color.BLACK);
+                textView_me.setTextColor(Color.BLACK);
+                break;
             case R.id.me:
-                replaceFragment(new HomeFragment());
+                replaceFragment(new MeFragement());
                 textView_home.setTextColor(Color.BLACK);
                 textView_recommend.setTextColor(Color.BLACK);
                 textView_discovery.setTextColor(Color.BLACK);

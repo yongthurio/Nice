@@ -1,10 +1,10 @@
-package com.yeung.pauleetech.nice.ReclviewVT;
+package com.yeung.pauleetech.nice.MainPageLayout.Fragment.ReclviewHR;
 
-public class Commodity {                       //一个商品类
+public class Mission {            //一个任务类
     private String name;
     private int imageId;
 
-    public Commodity(String name, int imageId){
+    public Mission(String name, int imageId){
         this.name=name;
         this.imageId=imageId;
     }

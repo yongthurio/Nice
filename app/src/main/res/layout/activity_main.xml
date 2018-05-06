@@ -38,26 +38,6 @@
                 android:text="首页"/>
         </LinearLayout>
         <LinearLayout
-            android:id="@+id/recommend"
-            android:orientation="vertical"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1">
-            <ImageView
-                android:id="@+id/image_recommend"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="2dp"
-                android:layout_marginTop="5dp"
-                android:src="@drawable/recommend_good_32px"/>
-            <TextView
-                android:id="@+id/text_recommend"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:text="推荐"/>
-        </LinearLayout>
-        <LinearLayout
             android:id="@+id/discovery"
             android:orientation="vertical"
             android:layout_width="0dp"
@@ -76,6 +56,26 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:text="发现"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/shoppingcart"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <ImageView
+                android:id="@+id/image_shoppingcart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/recommend_good_32px"/>
+            <TextView
+                android:id="@+id/text_recommend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="购物车"/>
         </LinearLayout>
         <LinearLayout
             android:id="@+id/me"

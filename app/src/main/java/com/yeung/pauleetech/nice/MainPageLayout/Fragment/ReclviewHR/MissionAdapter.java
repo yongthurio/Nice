@@ -1,4 +1,4 @@
-package com.yeung.pauleetech.nice.ReclviewHR;
+package com.yeung.pauleetech.nice.MainPageLayout.Fragment.ReclviewHR;
 
 
 import android.support.v7.widget.RecyclerView;

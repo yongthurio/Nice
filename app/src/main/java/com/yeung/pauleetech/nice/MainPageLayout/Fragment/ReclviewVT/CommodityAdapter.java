@@ -1,4 +1,4 @@
-package com.yeung.pauleetech.nice.ReclviewVT;
+package com.yeung.pauleetech.nice.MainPageLayout.Fragment.ReclviewVT;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -8,8 +8,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.yeung.pauleetech.nice.R;
-import com.yeung.pauleetech.nice.ReclviewHR.Mission;
-import com.yeung.pauleetech.nice.ReclviewHR.MissionAdapter;
 
 import java.util.List;
 

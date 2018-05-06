@@ -1,66 +1,51 @@
-package com.yeung.pauleetech.nice.Fragment;
+package com.yeung.pauleetech.nice.MainPageLayout.Fragment.RollviewpagerImt;
 
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.jude.rollviewpager.RollPagerView;
 import com.jude.rollviewpager.adapter.LoopPagerAdapter;
 import com.yeung.pauleetech.nice.R;
-import com.yeung.pauleetech.nice.ReclviewHR.Mission;
-import com.yeung.pauleetech.nice.ReclviewHR.MissionAdapter;
-import com.yeung.pauleetech.nice.ReclviewVT.Commodity;
-import com.yeung.pauleetech.nice.ReclviewVT.CommodityAdapter;
+import com.yeung.pauleetech.nice.MainPageLayout.Fragment.ReclviewHR.Mission;
+import com.yeung.pauleetech.nice.MainPageLayout.Fragment.ReclviewHR.MissionAdapter;
+import com.yeung.pauleetech.nice.MainPageLayout.Fragment.ReclviewVT.Commodity;
+import com.yeung.pauleetech.nice.MainPageLayout.Fragment.ReclviewVT.CommodityAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class HomeFragment extends Fragment {
-    private View view;
+public class LoopActivity extends AppCompatActivity {
     private RollPagerView mViewPager;
     private List<Mission> missionList=new ArrayList<>();
     private List<Commodity> commodityList=new ArrayList<>();
 
-    private ImageView title_image;
-    private TextView searchText;
-    private TextView search_text;
-
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        view= inflater.inflate(R.layout.fragment_home,container,false);
-        onCreateItem();
-        return view;
-    }
-
-    public void onCreateItem() {
-        title_image=(ImageView)view.findViewById(R.id.title_image);
-        searchText =(TextView) view.findViewById(R.id.search_text);
-        search_text =(TextView) view.findViewById(R.id.title_text);
-        mViewPager = (RollPagerView) view.findViewById(R.id.view_pager);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_loop);
+        mViewPager = (RollPagerView) findViewById(R.id.view_pager);
         mViewPager.setAdapter(new ImageLoopAdapter(mViewPager));
 
-        //*   对ReclviewHR的操作  *//*
+        /*   对ReclviewHR的操作  */
         initMission();
-        RecyclerView recyclerView=(RecyclerView) view.findViewById(R.id.recycler_view_hr);
-        LinearLayoutManager layoutManager=new LinearLayoutManager(getActivity());  //new一个线性布局管理器
+        RecyclerView recyclerView=(RecyclerView) findViewById(R.id.recycler_view_hr);
+        LinearLayoutManager layoutManager=new LinearLayoutManager(this);  //new一个线性布局管理器
         layoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
         recyclerView.setLayoutManager(layoutManager);
         MissionAdapter adapter=new MissionAdapter(missionList);
         recyclerView.setAdapter(adapter);
 
-        //*   对ReclviewVT的操作  *//*
+        /*   对ReclviewVT的操作  */
         initCommodity();
-        RecyclerView recyclerView1=(RecyclerView) view.findViewById(R.id.recycler_view_vt);
-        StaggeredGridLayoutManager sglayoutmanager=new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL);
+        RecyclerView recyclerView1=(RecyclerView) findViewById(R.id.recycler_view_vt);
+        StaggeredGridLayoutManager sglayoutmanager=new StaggeredGridLayoutManager(4,StaggeredGridLayoutManager.VERTICAL);
         recyclerView1.setLayoutManager(sglayoutmanager);
         CommodityAdapter adapter1=new CommodityAdapter(commodityList);
         recyclerView1.setAdapter(adapter1);
@@ -95,24 +80,24 @@ public class HomeFragment extends Fragment {
     }
 
     private void initMission(){
-        Mission register=new Mission("签到",R.drawable.register);
-        missionList.add(register);
-        Mission coupon=new Mission("优惠券",R.drawable.coupon);
-        missionList.add(coupon);
-        Mission msn1=new Mission("msn1",R.drawable.find2);
-        missionList.add(msn1);
-        Mission msn2=new Mission("签到",R.drawable.contact);
-        missionList.add(msn2);
+            Mission register=new Mission("签到",R.drawable.register);
+            missionList.add(register);
+            Mission coupon=new Mission("优惠券",R.drawable.coupon);
+            missionList.add(coupon);
+            Mission msn1=new Mission("msn1",R.drawable.find2);
+            missionList.add(msn1);
+            Mission msn2=new Mission("签到",R.drawable.contact);
+            missionList.add(msn2);
 
     }
 
     private void initCommodity(){
         for(int i=0;i<10;i++){
-            Commodity co1=new Commodity("硫酸铵",R.drawable.fertilizer1);
+            Commodity co1=new Commodity("硫酸铵",R.drawable.contact);
             commodityList.add(co1);
-            Commodity co2=new Commodity("复合肥",R.drawable.fertilizer2);
+            Commodity co2=new Commodity("复合肥",R.drawable.coupon);
             commodityList.add(co2);
-            Commodity co3=new Commodity("沃博特",R.drawable.fertilizer4);
+            Commodity co3=new Commodity("沃博特",R.drawable.find2);
             commodityList.add(co3);
             Commodity co4=new Commodity("金沃地",R.drawable.register);
             commodityList.add(co4);
