@@ -47,49 +47,54 @@
 
        <TextView
            android:id="@+id/title_text"
-           android:layout_width="60dp"
+           android:layout_width="40dp"
            android:layout_height="wrap_content"
            android:text="搜索"
            android:layout_marginLeft="10dp"
            android:layout_gravity="center_vertical"/>
    </LinearLayout>
 
-    <ScrollView
+    <android.support.design.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <LinearLayout
-            android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <android.support.v4.widget.NestedScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <com.jude.rollviewpager.RollPagerView
-                android:id="@+id/view_pager"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="160dp"
-                app:rollviewpager_play_delay="3000"/>
+                android:layout_height="wrap_content">
+                <com.jude.rollviewpager.RollPagerView
+                    android:id="@+id/view_pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    app:rollviewpager_play_delay="3000"/>
 
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/recycler_view_hr"
-                android:layout_width="match_parent"
-                android:layout_height="80sp"/>
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_view_hr"
+                    android:layout_width="match_parent"
+                    android:layout_height="80sp"/>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="8dp"
-                android:background="#DEDEDE"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:background="#DEDEDE"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:text="为你推荐"
-                android:textColor="#FF5000"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="为你推荐"
+                    android:textColor="#FF5000"/>
 
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/recycler_view_vt"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-        </LinearLayout>
-    </ScrollView>
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_view_vt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </android.support.design.widget.CoordinatorLayout>
 
 </LinearLayout>
 

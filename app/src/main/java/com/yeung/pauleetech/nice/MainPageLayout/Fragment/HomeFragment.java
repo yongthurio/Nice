@@ -1,5 +1,6 @@
 package com.yeung.pauleetech.nice.MainPageLayout.Fragment;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -50,6 +51,7 @@ public class HomeFragment extends Fragment {
         //*   对ReclviewHR的操作  *//*
         initMission();
         RecyclerView recyclerView=(RecyclerView) view.findViewById(R.id.recycler_view_hr);
+
         LinearLayoutManager layoutManager=new LinearLayoutManager(getActivity());  //new一个线性布局管理器
         layoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
         recyclerView.setLayoutManager(layoutManager);
@@ -59,7 +61,12 @@ public class HomeFragment extends Fragment {
         //*   对ReclviewVT的操作  *//*
         initCommodity();
         RecyclerView recyclerView1=(RecyclerView) view.findViewById(R.id.recycler_view_vt);
-        StaggeredGridLayoutManager sglayoutmanager=new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL);
+        StaggeredGridLayoutManager sglayoutmanager=new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL){
+            @Override
+            public boolean canScrollVertically() {
+                return false;
+            }
+        };
         recyclerView1.setLayoutManager(sglayoutmanager);
         CommodityAdapter adapter1=new CommodityAdapter(commodityList);
         recyclerView1.setAdapter(adapter1);

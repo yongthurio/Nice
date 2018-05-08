@@ -71,7 +71,7 @@
                 android:layout_marginTop="5dp"
                 android:src="@drawable/recommend_good_32px"/>
             <TextView
-                android:id="@+id/text_recommend"
+                android:id="@+id/text_shoppingcart"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"

@@ -1,5 +1,6 @@
 package com.yeung.pauleetech.nice;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -23,16 +24,16 @@ import butterknife.ButterKnife;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
     @BindView(R.id.apphome)
     LinearLayout home;
-    @BindView(R.id.recommend)
-    LinearLayout recommend;
+    @BindView(R.id.shoppingcart)
+    LinearLayout shoppingcart;
     @BindView(R.id.discovery)
     LinearLayout discovery;
     @BindView(R.id.me)
     LinearLayout me;
     @BindView(R.id.text_home)
     TextView textView_home;
-    @BindView(R.id.text_recommend)
-    TextView textView_recommend;
+    @BindView(R.id.text_shoppingcart)
+    TextView text_shoppingcart;
     @BindView(R.id.text_discovery)
     TextView textView_discovery;
     @BindView(R.id.text_me)
@@ -47,11 +48,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         textView_home.setTextColor(Color.GREEN);
         home.setOnClickListener(this);
-        recommend.setOnClickListener(this);
+        shoppingcart.setOnClickListener(this);
         discovery.setOnClickListener(this);
         me.setOnClickListener(this);
-       /* Intent LAintent=new Intent(this,LoopActivity.class);
-        startActivity(LAintent);*/
     }
 
     private void replaceFragment(Fragment fragment) {
@@ -73,28 +72,28 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.apphome:
                 replaceFragment(new HomeFragment());
                 textView_home.setTextColor(Color.GREEN);
-                textView_recommend.setTextColor(Color.BLACK);
+                text_shoppingcart.setTextColor(Color.BLACK);
                 textView_discovery.setTextColor(Color.BLACK);
                 textView_me.setTextColor(Color.BLACK);
                 break;
             case R.id.discovery:
                 replaceFragment(new HomeFragment());
                 textView_home.setTextColor(Color.BLACK);
-                textView_recommend.setTextColor(Color.BLACK);
+                text_shoppingcart.setTextColor(Color.BLACK);
                 textView_discovery.setTextColor(Color.GREEN);
                 textView_me.setTextColor(Color.BLACK);
                 break;
             case R.id.shoppingcart:
                 replaceFragment(new ShoppingCartFragment());
                 textView_home.setTextColor(Color.BLACK);
-                textView_recommend.setTextColor(Color.GREEN);
+                text_shoppingcart.setTextColor(Color.GREEN);
                 textView_discovery.setTextColor(Color.BLACK);
                 textView_me.setTextColor(Color.BLACK);
                 break;
             case R.id.me:
                 replaceFragment(new MeFragement());
                 textView_home.setTextColor(Color.BLACK);
-                textView_recommend.setTextColor(Color.BLACK);
+                text_shoppingcart.setTextColor(Color.BLACK);
                 textView_discovery.setTextColor(Color.BLACK);
                 textView_me.setTextColor(Color.GREEN);
                 break;
