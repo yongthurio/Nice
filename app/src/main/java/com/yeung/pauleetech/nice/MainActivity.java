@@ -45,7 +45,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         replaceFragment(new HomeFragment());
         ButterKnife.bind(this);
-
         textView_home.setTextColor(Color.GREEN);
         home.setOnClickListener(this);
         shoppingcart.setOnClickListener(this);

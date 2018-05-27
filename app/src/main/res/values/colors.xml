@@ -7,12 +7,13 @@
     <color name="transparent_background">#99ffffff</color>
     <color name="GrayLine">#ffdee3ee</color>
     <color name="blue">#00000000</color>
+    <color name="scan_corner_color">#0effc2</color>
 
     <color name="background">#fff3f4f6</color>
     <color name="test">#fff3f4f6</color>
     <color name="f1f3f6">#fff1f3f6</color>
     <color name="possible_result_points">#c0ffff00</color>
-    <color name="result_view">#b0000000</color>
+    <color name="result_view">#000000</color>
     <color name="transparent">#00000000</color>
     <color name="viewfinder_frame">#ff000000</color>
     <color name="viewfinder_mask">#60000000</color>
