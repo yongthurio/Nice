@@ -18,5 +18,6 @@ public class MeFragement extends Fragment {
         // inflate是加载一个布局文件，而findViewById则是从布局文件中查找一个控件。
         View view = inflater.inflate(R.layout.fragement_me, container, false);
         return view;
+
     }
 }
